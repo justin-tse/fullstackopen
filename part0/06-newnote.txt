@@ -1,0 +1,13 @@
+title Single page app sequence diagram - new note
+
+note over browser:
+user input text and clicking the submit button
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: {content: "Jesus Christ", date: "2021-03-11T16:00:06.397Z"}
+
+note over browser:
+The code fetches the notes from the server as JSON-data and adds  
+HTML elements for displaying the notes to the page using the DOM-API
+end note
