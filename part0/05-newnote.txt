@@ -1,0 +1,21 @@
+title Single page app sequence diagram - new note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{content: "chingi changa",date: "2021-03-10T15:45:41.941Z"}, ...]
+
+note over browser:
+The code fetches the notes from the server as JSON-data and adds  
+HTML elements for displaying the notes to the page using the DOM-API
+end note
