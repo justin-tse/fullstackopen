@@ -1,6 +1,5 @@
 import React from 'react';
 
-const App = () => {
 const course = 'Half Stack application development';
 const part1 = {
   name: 'Fundamentals of React',
@@ -14,6 +13,8 @@ const part3 = {
   name: 'State of a component',
   exercises: 14,
 };
+
+const App = () => {
   return (
     <div>
       <Header course={course} />
